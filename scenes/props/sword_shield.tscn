@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyms00o52fbi3"]
+
+[ext_resource type="PackedScene" uid="uid://b0fyqmottut2t" path="res://models/props/sword_shield.glb" id="1_n717g"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ktxf0"]
+size = Vector3(1, 1, 0.2)
+
+[node name="SwordShield" type="StaticBody3D"]
+
+[node name="sword_shield" parent="." instance=ExtResource("1_n717g")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.1)
+shape = SubResource("BoxShape3D_ktxf0")

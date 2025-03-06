@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0kvthqyy3kur"]
+
+[ext_resource type="PackedScene" uid="uid://ci1231qy7q7n1" path="res://models/props/keyring.glb" id="1_dlfu5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f6oac"]
+size = Vector3(0.9, 0.1, 1.1)
+
+[node name="Keyring" type="StaticBody3D"]
+
+[node name="keyring2" parent="." instance=ExtResource("1_dlfu5")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05, 0.05, -0.05)
+shape = SubResource("BoxShape3D_f6oac")
